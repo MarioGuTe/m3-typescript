@@ -1,7 +1,9 @@
-const myName: string = "Mario";
+const express = require("express");
+require("dotenv").config();
 
-function Hi(name: string): string {
-  return `Hi my name is ${name}`;
-}
+const PORT = process.env.PORT;
+const app = express();
 
-Hi(myName);
+app.listen(PORT, () => {
+  console.log(`Server listening on Port ${PORT}`);
+});
